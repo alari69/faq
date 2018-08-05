@@ -9,15 +9,18 @@ To run the FAQ project:
 
 FAQ Epic
     Phase I - Create initial app/project.
-        This entails cloning the FAQ from the professors Github
-        Once this was done, and was changed to be our own, we could begin adding the extra features.
+        This entails cloning the FAQ from the professors Github and making it our own, or it tries to update the original 
+        location Once this was done, and was changed to be our own, we could begin adding the extra features.
+        
     Phase II - Setup the database.
-        In this pahase we setup te database. This entails models, seeds, migrations and unit tests.
-        The migrations we created were profile, questions and answers.
+        In this pahase we setup the databaseusing Auth. This entails models, seeds, migrations and unit tests.
+        The migrations we created were profile, users, questions and answers.
+        
     Phase III - Forms and validations
         In this phase we created the forms and code for login, questions, answers, profile and logout
         This including testing the data from our created databases, and 
         testing creating new users and profiles.
+        
     Phase IV - Adding our own additional feature.
         For this phase I chose an additional feature to add. I actually chose a couple.
         I started with adding code that show's the user's first name after 
@@ -28,11 +31,13 @@ FAQ Epic
         other areas. I also needed to add a public folder Avatars to the Storage directory 
         for the Default image. When the user creates a profile or logs in, the default
         image shows with their name. An issue arose that coud not be fixed when 
-        the app was uploaded to Heroku. The file is not stored on Heroku. I also updated the looks of certain areas of pages
-        on the website. Last, I attempted to create a way for the user to upload their own image for a profile picture.
-        I was not able to accomplish this as I would get an error. Afetr the error I would refresh the page
-        and the image would show. I took 2-3 days to try and figure out and I could not.
-        I removed the code BUT sent a branch to Github (final feature II) to show my efforts 
+        the app was uploaded to Heroku. The file is not stored on Heroku. Heroku doesn't carry over stored files. I also updated 
+        the looks of certain areas of pages on the website. 
+            Last, I attempted to create a way for the user to upload their own image for a profile picture.
+        I was not able to accomplish this as I would get an error. After the error I would refresh the page
+        and the image would show. This entailed using public folders, files, so images could be accessed. Also User and Profile 
+        controller, and altering some view , and needing to upload and use Imaage Intervention. It took 2-3 days to try and 
+        figure out and I could not.I removed the code BUT sent a branch to Github (final feature II) to show my efforts. 
         
     Story I-A website seems better when personalized, so a good feature is 
             seeing your name when you login.        
