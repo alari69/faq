@@ -1,12 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Profile;
 use App\User;
-
 class ProfileController extends Controller
 {
     /**
@@ -18,7 +15,6 @@ class ProfileController extends Controller
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -48,15 +44,11 @@ class ProfileController extends Controller
             'body.required' => ' Body is required',
         ]);
         $input = request()->all();
-
         $profile = new Profile($input);
         $profile->user()->associate(Auth::user());
         $profile->save();
-
         return redirect()->route('home')->with('message', 'Profile Created');
     }
-
-
     /**
      * Display the specified resource.
      *
@@ -69,7 +61,6 @@ class ProfileController extends Controller
         $profile = $user->profile;
         return view('profile')->with('profile', $profile);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -106,8 +97,6 @@ class ProfileController extends Controller
         $profile->save();
         return redirect()->route('home')->with('message', 'Updated Profile');
     }
-
-
     /**
      * Remove the specified resource from storage.
      *

@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
+
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">My Profile</div>
@@ -12,6 +13,7 @@
                         @else()
                             {!! Form::model($profile, ['route' => ['profile.update', Auth::user()->id, $profile->id], 'method' => 'patch']) !!}
                         @endif
+
                         <div class="form-group">
                             {!! Form::label('fname', 'First Name') !!}
                             {!! Form::text('fname', $profile->fname, ['class' => 'form-control','required' => 'required']) !!}
