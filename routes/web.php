@@ -30,7 +30,7 @@ Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@d
 Route::resources([
     'questions' => 'QuestionController']);
 Route::get('profile', 'UserController@profile');
-Route::post('profile', 'ProfileController@update')->middleware('auth')->name('profile.update');
+Route::post('profile', 'UserController@update_avatar');
 
 
 

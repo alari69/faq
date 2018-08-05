@@ -7,6 +7,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">My Profile</div>
+
+
                     <div class="card-body">
                         @if($edit === FALSE)
                             {!! Form::model($profile, ['route' => ['profile.store', Auth::user()->id], 'method' => 'post']) !!}
@@ -26,6 +28,7 @@
                             {!! Form::label('body', 'Body') !!}
                             {!! Form::text('body', $profile->body, ['class' => 'form-control','required' => 'required']) !!}
                         </div>
+
                         <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save
                         </button>
                         {!! Form::close() !!}

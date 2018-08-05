@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Profile;
 use App\User;
+use Image;
 class ProfileController extends Controller
 {
     /**
@@ -97,6 +98,10 @@ class ProfileController extends Controller
         $profile->save();
         return redirect()->route('home')->with('message', 'Updated Profile');
     }
+
+
+
+
     /**
      * Remove the specified resource from storage.
      *
